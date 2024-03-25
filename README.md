@@ -21,15 +21,15 @@ node main.js --openreview_main_url='https://openreview.net/group?id=MIDL.io/2024
 ```
 {
   "paper_url_1": {
-    "preiminary_ratings": [3, 2, 1],
+    "preliminary_ratings": [3, 2, 1],
     "average_rating": "2.00"
   },
   "paper_url_2": {
-    "preiminary_ratings": [2, 4, 2],
+    "preliminary_ratings": [2, 4, 2],
     "average_rating": "2.67"
   },
   "paper_url_3": {
-    "preiminary_ratings": [1, 4, 1],
+    "preliminary_ratings": [1, 4, 1],
     "average_rating": "2.00"
   },
   ...
