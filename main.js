@@ -158,7 +158,7 @@ async function extract_stats(pages) {
             count++;
         }
     }
-    console.log(`Number of papers with rating above average (>=${avg_rating_all_papers.toFixed(2)}): ${count}`);
+    console.log(`Number of papers with rating above average (>${avg_rating_all_papers.toFixed(2)}): ${count}`);
 
     let count_r = 0;
     for (const key in result) {
@@ -186,10 +186,10 @@ async function extract_stats(pages) {
             count_4_5++;
         }
     }
-    console.log(`Number of papers with rating between 1 and 2: ${count_1_2}`);
-    console.log(`Number of papers with rating between 2 and 3: ${count_2_3}`);
-    console.log(`Number of papers with rating between 3 and 4: ${count_3_4}`);
-    console.log(`Number of papers with rating between 4 and 5: ${count_4_5}`);
+    console.log(`Number of papers with rating between [1 and 2): ${count_1_2}`);
+    console.log(`Number of papers with rating between [2 and 3): ${count_2_3}`);
+    console.log(`Number of papers with rating between [3 and 4): ${count_3_4}`);
+    console.log(`Number of papers with rating between [4 and 5]: ${count_4_5}`);
 
     // save the summary in a file
     summary_file_name = venue_name + '_summary.txt';
@@ -199,10 +199,10 @@ async function extract_stats(pages) {
     fs.appendFileSync(summary_file_name, `Average rating given by reviewers: ${avg_rating_by_reviewers.toFixed(2)}\n`);
     fs.appendFileSync(summary_file_name, `Number of papers with rating above average (>${avg_rating_all_papers.toFixed(2)}): ${count}\n`);
     fs.appendFileSync(summary_file_name, `Number of papers with rating above average given by reviewers (>${avg_rating_by_reviewers.toFixed(2)}): ${count_r}\n`);
-    fs.appendFileSync(summary_file_name, `Number of papers with rating between 1 and 2: ${count_1_2}\n`);
-    fs.appendFileSync(summary_file_name, `Number of papers with rating between 2 and 3: ${count_2_3}\n`);
-    fs.appendFileSync(summary_file_name, `Number of papers with rating between 3 and 4: ${count_3_4}\n`);
-    fs.appendFileSync(summary_file_name, `Number of papers with rating between 4 and 5: ${count_4_5}\n`);
+    fs.appendFileSync(summary_file_name, `Number of papers with rating between [1 and 2): ${count_1_2}\n`);
+    fs.appendFileSync(summary_file_name, `Number of papers with rating between [2 and 3): ${count_2_3}\n`);
+    fs.appendFileSync(summary_file_name, `Number of papers with rating between [3 and 4): ${count_3_4}\n`);
+    fs.appendFileSync(summary_file_name, `Number of papers with rating between [4 and 5]: ${count_4_5}\n`);
     console.log(`Summary saved in text file`);
 
     process.exit();

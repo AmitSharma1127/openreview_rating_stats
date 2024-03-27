@@ -18,6 +18,7 @@ node main.js --openreview_main_url='https://openreview.net/group?id=MIDL.io/2024
 ```
 
 **Output**
+Raw data in JSON file 
 ```
 {
   "paper_url_1": {
@@ -35,7 +36,20 @@ node main.js --openreview_main_url='https://openreview.net/group?id=MIDL.io/2024
   ...
 }
 ```
+Stats in TXT file
+```
+----- OpenReview SUMMARY - MIDL -----
 
+Number of papers processed: 204
+Average rating of all papers: 1.93
+Average rating given by reviewers: 2.91
+Number of papers with rating above average (>1.93): 125
+Number of papers with rating above average given by reviewers (>2.91): 125
+Number of papers with rating between [1 and 2): 10
+Number of papers with rating between [2 and 3): 57
+Number of papers with rating between [3 and 4): 52
+Number of papers with rating between [4 and 5]: 16
+```
 ### Disclaimer
 This is a simple script designed to provide a summary analysis of the reviews from specific conference or venue hosted on OpenReview, with the intention of offering a general overview of the review trends for researchers, authors, and participants interested in the academic quality and focus areas of the conference.
 
